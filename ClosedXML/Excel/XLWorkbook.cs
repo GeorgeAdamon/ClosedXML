@@ -293,6 +293,25 @@ namespace ClosedXML.Excel
             };
         }
 
+        public void CopyTheme(IXLTheme other)
+        {
+            Theme = new XLTheme
+            {
+                Text1 = other.Text1,
+                Background1 = other.Background1,
+                Text2 = other.Text2,
+                Background2 = other.Background2,
+                Accent1 = other.Accent1,
+                Accent2 =  other.Accent2,
+                Accent3 =  other.Accent3,
+                Accent4 =  other.Accent4,
+                Accent5 =  other.Accent5,
+                Accent6 =  other.Accent6,
+                Hyperlink = other.Hyperlink,
+                FollowedHyperlink = other.FollowedHyperlink
+            };
+        }
+
 #nullable enable
         [Obsolete($"Use {nameof(DefinedName)} instead.")]
         public IXLDefinedName? NamedRange(String name) => DefinedName(name);
